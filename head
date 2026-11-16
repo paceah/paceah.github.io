@@ -1,8 +1,8 @@
 {
-  "contentToken": "bfd9bff07d56dc977e8099bdbda8dc5e7aabf35d",
-  "policySha1": "55c31380367173c5a9ae86709bfb8bd94a07c6d0",
-  "createdAt": "2026-11-16T15:30:42.185342700Z",
-  "journalHead": 4,
+  "contentToken": "af488344acaa59d919330b3173fd7a7b4bf3f00d",
+  "policySha1": "f60b6d239367a028e0ef816985fc2703aac0a862",
+  "createdAt": "2026-11-16T15:34:55.527239700Z",
+  "journalHead": 5,
   "waitingMusicSha1": "",
   "ownershipLedger": {
     "modpackId": "4iawmc1",
@@ -2832,11 +2832,11 @@
         "currentStatus": "PRESENT"
       },
       {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporeconfig.toml",
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/controls/options.txt",
         "historicalHashes": [
           {
-            "sha1": "c7f30970fefc04405f0f36ee51e7047e8e0822a1",
-            "size": 55231
+            "sha1": "fd24df2b134641c373a1ab5fb17b7489fb9340ea",
+            "size": 10178
           }
         ],
         "historicalGroupIds": [
@@ -2845,20 +2845,7 @@
         "currentStatus": "PRESENT"
       },
       {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporedata.toml",
-        "historicalHashes": [
-          {
-            "sha1": "8cd22dae94f40d1567495920f3dc5b58f81eda9c",
-            "size": 16620
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "PRESENT"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/ПОЛНЫЙ СПИСОК ИЗМЕНЕНИЙ (НЕ КИДАТЬ В КОНФИГ).md",
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/inquisition/README.md",
         "historicalHashes": [
           {
             "sha1": "57dfd1feaa734da89300827d305896f662ebed00",
@@ -2871,11 +2858,11 @@
         "currentStatus": "PRESENT"
       },
       {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporeconfig.toml",
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/inquisition/sporeconfig.toml",
         "historicalHashes": [
           {
-            "sha1": "d82127f199b7bfa3a5f17e14aa8b7c1b4221eb54",
-            "size": 53923
+            "sha1": "c7f30970fefc04405f0f36ee51e7047e8e0822a1",
+            "size": 55231
           }
         ],
         "historicalGroupIds": [
@@ -2884,11 +2871,11 @@
         "currentStatus": "PRESENT"
       },
       {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporedata.toml",
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/inquisition/sporedata.toml",
         "historicalHashes": [
           {
-            "sha1": "38c2dd66263c25205f3e8be2c7adbe3555c2f211",
-            "size": 19625
+            "sha1": "8cd22dae94f40d1567495920f3dc5b58f81eda9c",
+            "size": 16620
           }
         ],
         "historicalGroupIds": [
@@ -2897,20 +2884,7 @@
         "currentStatus": "PRESENT"
       },
       {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/ОПИСАНИЕ КОНФИГА (НЕ КИДАТЬ В ПАПКУ config).txt",
-        "historicalHashes": [
-          {
-            "sha1": "c85d9137324db2aa47bb4a86b60233d73fd20bff",
-            "size": 771
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "PRESENT"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие торговлю/версия 1.0 АЛЬФА/economical_villager_trading-common.toml",
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/trading/economical_villager_trading-common.toml",
         "historicalHashes": [
           {
             "sha1": "2079b31d1a291a2d9de0409ecbcecff501d586d9",
@@ -2923,6 +2897,136 @@
         "currentStatus": "PRESENT"
       },
       {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/vanilla/README.txt",
+        "historicalHashes": [
+          {
+            "sha1": "c85d9137324db2aa47bb4a86b60233d73fd20bff",
+            "size": 771
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "PRESENT"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/vanilla/sporeconfig.toml",
+        "historicalHashes": [
+          {
+            "sha1": "d82127f199b7bfa3a5f17e14aa8b7c1b4221eb54",
+            "size": 53923
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "PRESENT"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/vanilla/sporedata.toml",
+        "historicalHashes": [
+          {
+            "sha1": "38c2dd66263c25205f3e8be2c7adbe3555c2f211",
+            "size": 19625
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "PRESENT"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporeconfig.toml",
+        "historicalHashes": [
+          {
+            "sha1": "c7f30970fefc04405f0f36ee51e7047e8e0822a1",
+            "size": 55231
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "TOMBSTONE"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporedata.toml",
+        "historicalHashes": [
+          {
+            "sha1": "8cd22dae94f40d1567495920f3dc5b58f81eda9c",
+            "size": 16620
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "TOMBSTONE"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/ПОЛНЫЙ СПИСОК ИЗМЕНЕНИЙ (НЕ КИДАТЬ В КОНФИГ).md",
+        "historicalHashes": [
+          {
+            "sha1": "57dfd1feaa734da89300827d305896f662ebed00",
+            "size": 31897
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "TOMBSTONE"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporeconfig.toml",
+        "historicalHashes": [
+          {
+            "sha1": "d82127f199b7bfa3a5f17e14aa8b7c1b4221eb54",
+            "size": 53923
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "TOMBSTONE"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporedata.toml",
+        "historicalHashes": [
+          {
+            "sha1": "38c2dd66263c25205f3e8be2c7adbe3555c2f211",
+            "size": 19625
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "TOMBSTONE"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/ОПИСАНИЕ КОНФИГА (НЕ КИДАТЬ В ПАПКУ config).txt",
+        "historicalHashes": [
+          {
+            "sha1": "c85d9137324db2aa47bb4a86b60233d73fd20bff",
+            "size": 771
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "TOMBSTONE"
+      },
+      {
+        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие торговлю/версия 1.0 АЛЬФА/economical_villager_trading-common.toml",
+        "historicalHashes": [
+          {
+            "sha1": "2079b31d1a291a2d9de0409ecbcecff501d586d9",
+            "size": 13158
+          }
+        ],
+        "historicalGroupIds": [
+          "main"
+        ],
+        "currentStatus": "TOMBSTONE"
+      },
+      {
         "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/НАСТРОЙКИ УПРАВЛЕНИЯ + БИНДЫ/options.txt",
         "historicalHashes": [
           {
@@ -2933,10 +3037,10 @@
         "historicalGroupIds": [
           "main"
         ],
-        "currentStatus": "PRESENT"
+        "currentStatus": "TOMBSTONE"
       }
     ],
-    "digest": "a891e46798b0c12fb60ad877d203e93d548c3fa7"
+    "digest": "baad486264dc19c58a78bfc53d74bbc31c0d774f"
   },
   "policy": {
     "modpackId": "4iawmc1",
@@ -4342,53 +4446,53 @@
               "sha1": "2bdd6f19ebb3ee1aacf8466f557435863a7e6c87",
               "murmur": "2639821809"
             },
-            "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporeconfig.toml": {
-              "size": "55231",
+            "ЗОМБИ ЧИПСЫ АДДОН/controls/options.txt": {
+              "size": "10178",
               "type": "other",
               "editable": false,
-              "sha1": "c7f30970fefc04405f0f36ee51e7047e8e0822a1"
+              "sha1": "fd24df2b134641c373a1ab5fb17b7489fb9340ea"
             },
-            "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporedata.toml": {
-              "size": "16620",
-              "type": "other",
-              "editable": false,
-              "sha1": "8cd22dae94f40d1567495920f3dc5b58f81eda9c"
-            },
-            "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/ПОЛНЫЙ СПИСОК ИЗМЕНЕНИЙ (НЕ КИДАТЬ В КОНФИГ).md": {
+            "ЗОМБИ ЧИПСЫ АДДОН/inquisition/README.md": {
               "size": "31897",
               "type": "other",
               "editable": false,
               "sha1": "57dfd1feaa734da89300827d305896f662ebed00"
             },
-            "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporeconfig.toml": {
-              "size": "53923",
+            "ЗОМБИ ЧИПСЫ АДДОН/inquisition/sporeconfig.toml": {
+              "size": "55231",
               "type": "other",
               "editable": false,
-              "sha1": "d82127f199b7bfa3a5f17e14aa8b7c1b4221eb54"
+              "sha1": "c7f30970fefc04405f0f36ee51e7047e8e0822a1"
             },
-            "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporedata.toml": {
-              "size": "19625",
+            "ЗОМБИ ЧИПСЫ АДДОН/inquisition/sporedata.toml": {
+              "size": "16620",
               "type": "other",
               "editable": false,
-              "sha1": "38c2dd66263c25205f3e8be2c7adbe3555c2f211"
+              "sha1": "8cd22dae94f40d1567495920f3dc5b58f81eda9c"
             },
-            "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/ОПИСАНИЕ КОНФИГА (НЕ КИДАТЬ В ПАПКУ config).txt": {
-              "size": "771",
-              "type": "other",
-              "editable": false,
-              "sha1": "c85d9137324db2aa47bb4a86b60233d73fd20bff"
-            },
-            "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие торговлю/версия 1.0 АЛЬФА/economical_villager_trading-common.toml": {
+            "ЗОМБИ ЧИПСЫ АДДОН/trading/economical_villager_trading-common.toml": {
               "size": "13158",
               "type": "other",
               "editable": false,
               "sha1": "2079b31d1a291a2d9de0409ecbcecff501d586d9"
             },
-            "ЗОМБИ ЧИПСЫ АДДОН/НАСТРОЙКИ УПРАВЛЕНИЯ + БИНДЫ/options.txt": {
-              "size": "10178",
+            "ЗОМБИ ЧИПСЫ АДДОН/vanilla/README.txt": {
+              "size": "771",
               "type": "other",
               "editable": false,
-              "sha1": "fd24df2b134641c373a1ab5fb17b7489fb9340ea"
+              "sha1": "c85d9137324db2aa47bb4a86b60233d73fd20bff"
+            },
+            "ЗОМБИ ЧИПСЫ АДДОН/vanilla/sporeconfig.toml": {
+              "size": "53923",
+              "type": "other",
+              "editable": false,
+              "sha1": "d82127f199b7bfa3a5f17e14aa8b7c1b4221eb54"
+            },
+            "ЗОМБИ ЧИПСЫ АДДОН/vanilla/sporedata.toml": {
+              "size": "19625",
+              "type": "other",
+              "editable": false,
+              "sha1": "38c2dd66263c25205f3e8be2c7adbe3555c2f211"
             }
           }
         }
