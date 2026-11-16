@@ -1,0 +1,385 @@
+# Spore Inquisition — полное сравнение исходных и пользовательских TOML
+
+Сравнение: конфиги автора Inquisition (`sporeconfig.toml`, `sporedata.toml`) -> твои (`(1)`).
+
+| Файл | Ключей в каждой версии | Отличающихся ключей | Добавленных/удалённых ключей |
+|---|---:|---:|---:|
+| sporeconfig.toml | 535 | 72 | 0 |
+| sporedata.toml | 100 | 14 | 0 |
+
+**Обратите внимание:** один параметр со списком может содержать десятки/сотни отличий по элементам. Все примеры ниже — изменения значений, не отсутствие ключей.
+
+## Готовое объединение (предложенный профиль)
+
+В основу взят комплект автора Inquisition. Все авторские списки сохранены без изменений, включая пустые списки обычного спавна и заражения блоков, расширенное заражение существ, рейды, очистку блоков и исключения из деспавна.
+
+Сохранены `true` для прогрузки чанков Calamity, Proto Hivemind и Vanguard. Поздние пороги Inquisition (700, 3500, 921600) оставлены.
+
+**Важно:** `Move the hivemind to the surface once it forms? = true` сохранено из твоих предпочтений; автор аддона использует false. При проблемах с формированием/расположением улья верни false.
+
+| Параметр | Автор | В объединении |
+|---|---|---|
+| `Despawning system.Maximum number of evolved infected` | 75 | **15** |
+| `Despawning system.Maximum number of hyper infected` | 50 | **5** |
+| `Despawning system.Maximum number of organoids` | 125 | **40** |
+| `Despawning system.Maximum number of regular infected` | 100 | **20** |
+| `Despawning system.Maximum number of scents` | 10 | **4** |
+| `Global Variables.Move the hivemind to the surface once it forms?` | false | **true** |
+| `Global Variables.Should evolved and hyper have a damage cap on hard mode?` | false | **true** |
+| `Mob Evolutions and Infection System.Evolutions.Evolution Timer in seconds` | 150 | **850** |
+| `Mob Evolutions and Infection System.Evolutions.Evolution Timer in seconds for hyper` | 600 | **1500** |
+| `Mob Evolutions and Infection System.Evolutions.Minimum amount of kills to start the evolution` | 1 | **4** |
+| `Mobs.Gastgeber.Seconds before Gastgeber spreads foliage` | 30 | **50** |
+| `Mobs.Mound.Sets Mound Ageing Cooldown` | 600 | **1500** |
+| `Mobs.Mound.Sets Mound Infection Cooldown` | 25 | **45** |
+| `Mobs.Mound.Sets the range in which a mound checks for feedable blocks` | 75 | **50** |
+| `Mobs.Proto Hivemind.Sets Proto Damage Cap, set to 0 to disable` | 50.0 | **20.0** |
+| `Mobs.Proto Hivemind.Sets The chance for a raid to start` | 3.0 | **0.5** |
+| `Mobs.Proto Hivemind.Sets the linking range` | 200 | **250** |
+| `Mobs.Scent.Should Scents have particles?` | true | **false** |
+| `Mobs.Scent.The max amount of Scents that can spawn in an area` | 5 | **2** |
+| `Mobs.Vanguard.Sets The size of the Vanguard raid` | 8 | **4** |
+| `Mobs.Vigil.Sets the maximum size of the wave` | 15 | **7** |
+| `Mobs.Womb.How much biomass does it get from consuming infected` | 5 | **3** |
+| `Mobs.Womb.Sets the required biomass before it summons a calamity` | 100 | **250** |
+| `Mobs.Womb.Sets the time before the Womb gains one biomass` | 30 | **75** |
+| `Spawns.MobCap` | 40 | **25** |
+
+## Полное сравнение отличий автора и твоих файлов
+
+### sporeconfig.toml
+
+**`Despawning system.Maximum number of evolved infected`**
+- Автор: `75`. У тебя: `15`.
+
+**`Despawning system.Maximum number of hyper infected`**
+- Автор: `50`. У тебя: `5`.
+
+**`Despawning system.Maximum number of organoids`**
+- Автор: `125`. У тебя: `7`.
+
+**`Despawning system.Maximum number of regular infected`**
+- Автор: `100`. У тебя: `20`.
+
+**`Despawning system.Maximum number of scents`**
+- Автор: `10`. У тебя: `6`.
+
+**`Despawning system.Mobs that will not be despawned by the system`**
+- Список: автор 10 записей, твой 8 записей.
+- Только автор / изменённые записи автора: `spore:hivetumor`, `spore:inf_player`
+- Только твой / изменённые записи у тебя: нет
+
+**`Effects.Mobs that are immune to the mycelium infection`**
+- Список: автор 1 записей, твой 10 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `minecraft:ghast`, `minecraft:iron_golem`, `minecraft:magma_cube`, `minecraft:mooshroom`, `minecraft:phantom`, `minecraft:skeleton_horse`, `minecraft:stray`, `minecraft:wither`, `minecraft:skeleton`
+
+**`Global Variables.Hunger in seconds`**
+- Автор: `200`. У тебя: `300`.
+
+**`Global Variables.Move the hivemind to the surface once it forms?`**
+- Автор: `False`. У тебя: `True`.
+
+**`Global Variables.Should certain mobs wear costumes on occasions?`**
+- Автор: `False`. У тебя: `True`.
+
+**`Global Variables.Should evolved and hyper have a damage cap on hard mode?`**
+- Автор: `False`. У тебя: `True`.
+
+**`Global Variables.The amount of needed Proto Hiveminds for the world to change (Proto World Modifier)`**
+- Автор: `10`. У тебя: `6`.
+
+**`Mob Evolutions and Infection System.Evolutions.Evolution Timer in seconds`**
+- Автор: `150`. У тебя: `850`.
+
+**`Mob Evolutions and Infection System.Evolutions.Evolution Timer in seconds for hyper`**
+- Автор: `600`. У тебя: `1500`.
+
+**`Mob Evolutions and Infection System.Evolutions.Infected Adventurer Evolutions`**
+- Список: автор 2 записей, твой 3 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:protector`
+
+**`Mob Evolutions and Infection System.Evolutions.Infected Human Evolutions`**
+- Список: автор 12 записей, твой 4 записей.
+- Только автор / изменённые записи автора: `spore:stalker`, `spore:jagd`, `spore:brute`, `spore:thorn`, `spore:scavenger`, `spore:inebriater`, `spore:nuclea`, `spore:protector`
+- Только твой / изменённые записи у тебя: нет
+
+**`Mob Evolutions and Infection System.Evolutions.Infected Husk Evolutions`**
+- Список: автор 2 записей, твой 3 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:jagd`
+
+**`Mob Evolutions and Infection System.Evolutions.Infected Pillager Evolutions`**
+- Список: автор 2 записей, твой 3 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:stalker`
+
+**`Mob Evolutions and Infection System.Evolutions.Infected Villager Evolutions`**
+- Список: автор 2 записей, твой 3 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:leaper`
+
+**`Mob Evolutions and Infection System.Evolutions.Infected Witch Evolutions`**
+- Список: автор 2 записей, твой 3 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:gorgon`
+
+**`Mob Evolutions and Infection System.Evolutions.Minimum amount of kills to start the evolution`**
+- Автор: `1`. У тебя: `4`.
+
+**`Mob Evolutions and Infection System.Evolutions.Minimum amount of kills to start the hyper evolution`**
+- Автор: `700`. У тебя: `16`.
+
+**`Mob Evolutions and Infection System.Infections.Mobs and their infected counterparts`**
+- Список: автор 136 записей, твой 19 записей.
+- Только автор / изменённые записи автора: `minecraft:iron_golem|spore:claw`, `minecraft:bee|spore:claw`, `minecraft:cat|spore:claw`, `minecraft:chicken|spore:claw`, `minecraft:cow|spore:claw`, `minecraft:dolphin|spore:claw`, `minecraft:donkey|spore:claw`, `minecraft:endermite|spore:claw`, `minecraft:fox|spore:claw`, `minecraft:frog|spore:claw`, `minecraft:goat|spore:claw`, `minecraft:hoglin|spore:claw`, `minecraft:horse|spore:claw`, `minecraft:ocelot|spore:claw`, `minecraft:panda|spore:claw`, `minecraft:parrot|spore:claw`, `minecraft:pig|spore:claw`, `minecraft:polar_bear|spore:claw`, `minecraft:rabbit|spore:claw`, `minecraft:ravager|spore:claw`, `minecraft:sheep|spore:claw`, `minecraft:shulker|spore:claw`, `minecraft:strider|spore:claw`, `minecraft:trader_llama|spore:claw`, `minecraft:turtle|spore:claw`, `minecraft:wolf|spore:claw`, `minecraft:zoglin|spore:claw`, `minecraft:piglin_brute|spore:claw`, `alexsmobs:alligator_snapping_turtle|spore:claw`, `alexsmobs:anaconda|spore:claw`, `alexsmobs:anteater|spore:claw`, `alexsmobs:bald_eagle|spore:claw`, `alexsmobs:bison|spore:claw`, `alexsmobs:blue_jay|spore:claw`, `alexsmobs:cahalot_whale|spore:claw`, `alexsmobs:caiman|spore:claw`, `alexsmobs:capuchin_monkey|spore:claw`, `alexsmobs:centipede_head|spore:claw`, `alexsmobs:cockroack|spore:claw`, `alexsmobs:cosmaw|spore:claw`, `alexsmobs:crimson_mosquito|spore:claw`, `alexsmobs:crocodile|spore:claw`, `alexsmobs:crow|spore:claw`, `alexsmobs:devils_hole_pupfish|spore:claw`, `alexsmobs:dropbear|spore:claw`, `alexsmobs:elephant|spore:claw`, `alexsmobs:endergrade|spore:claw`, `alexsmobs:farseer|spore:claw`, `alexsmobs:flutter|spore:claw`, `alexsmobs:emu|spore:claw`, `alexsmobs:frilled_shark|spore:claw`, `alexsmobs:gazelle|spore:claw`, `alexsmobs:gelada_monkey|spore:claw`, `alexsmobs:giant_squid|spore:claw`, `alexsmobs:gorilla|spore:claw`, `alexsmobs:grizzly_bear|spore:claw`, `alexsmobs:hammerhead_shark|spore:claw`, `alexsmobs:kangaroo|spore:claw`, `alexsmobs:komodo_dragon|spore:claw`, `alexsmobs:laviathan|spore:claw`, `alexsmobs:maned_wolf|spore:claw`, `alexsmobs:mantis_shrimp|spore:claw`, `alexsmobs:mimic_octopus|spore:claw`, `alexsmobs:mimicube|spore:claw`, `alexsmobs:moose|spore:claw`, `alexsmobs:mudskipper|spore:claw`, `alexsmobs:murmur|spore:inf_witch`, `alexsmobs:orca|spore:claw`, `alexsmobs:platypus|spore:claw`, `alexsmobs:potoo|spore:claw`, `alexsmobs:raccoon|spore:claw`, `alexsmobs:rain_frog|spore:claw`, `alexsmobs:rattlesnake|spore:claw`, `alexsmobs:rhinoceros|spore:claw`, `alexsmobs:roadrunner|spore:claw`, `alexsmobs:rocky_roller|spore:claw`, `alexsmobs:sea_bear|spore:claw`, `alexsmobs:seal|spore:claw`, `alexsmobs:warped_toad|spore:claw`, `alexsmobs:shoebill|spore:claw`, `alexsmobs:skreecher|spore:claw`, `alexsmobs:skunk|spore:claw`, `alexsmobs:snow_leopard|spore:claw`, `alexsmobs:straddler|spore:claw`, `alexsmobs:tarantula_hawk|spore:claw`, `alexsmobs:tasmanian_devil|spore:claw`, `alexsmobs:tiger|spore:claw`, `alexsmobs:toucan|spore:claw`, `alexsmobs:tusklin|spore:claw`, `minecraft:enderman|spore:claw`, `mca:female_villager|spore:inf_player`, `mca:male_villager|spore:inf_player`, `minecraft:piglin|spore:claw`, `ars_nouveau:whirlisprig|ars_fauna:deepsprig`, `ars_fauna:seasprig|ars_fauna:deepsprig`, `ars_fauna:thornsprig|ars_fauna:deepsprig`, `cataclysm:nameless_sorcerer|spore:inf_evoker`, `illagerinvasion:invoker|spore:inf_evoker`, `illagerinvasion:sorcerer|spore:inf_witch`, `illagerinvasion:necromancer|spore:inf_evoker`, `illagerinvasion:provoker|spore:inf_pillager`, `illagerinvasion:alchemist|spore:inf_witch`, `illagerinvasion:archivist|spore:inf_witch`, `illagerinvasion:basher|spore:inf_vindicator`, `illagerinvasion:inquisitor|spore:brute`, `illagerinvasion:marauder|spore:inf_pillager`, `illagerinvasion:firecaller|spore:inf_witch`, `twilightforest:minotaur|twilightforest:minoshroom`, `illageandspillage:igniter|spore:braiomil`, `illageandspillage:twittollager|spore:volatile`, `illageandspillage:preserver|spore:knight`, `illageandspillage:absorber|spore:brute`, `illageandspillage:magispeller|spore:inf_evoker`, `illageandspillage:old_magispeller|spore:inf_evoker`, `illageandspillage:spiritcaller|spore:inf_evoker`, `illageandspillage:freakager|spore:inf_evoker`, `illageandspillage:old_freakager|spore:inf_evoker`, `illageandspillage:ragno|spore:sieger`, `illageandspillage:old_ragno|spore:sieger`, `touhou_little_maid:maid|spore:reconstructor`
+- Только твой / изменённые записи у тебя: `minecraft:zombie|spore:inf_human`, `minecraft:husk|spore:inf_husk`, `minecraft:drowned|spore:inf_drowned`
+
+**`Mobs.Gastgeber.Infection Range`**
+- Автор: `25`. У тебя: `15`.
+
+**`Mobs.Gastgeber.Seconds before Gastgeber moves from the area`**
+- Автор: `500`. У тебя: `600`.
+
+**`Mobs.Gastgeber.Seconds before Gastgeber spreads foliage`**
+- Автор: `30`. У тебя: `90`.
+
+**`Mobs.Groberfub.Sets Groberfub Max health`**
+- Автор: `85.0`. У тебя: `75.0`.
+
+**`Mobs.Hivetumor.Mobs that the Hivetumor can summon to defend itself`**
+- Список: автор 3 записей, твой 4 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:braurei`
+
+**`Mobs.Hivetumor.Time before it grows back into a hivemind`**
+- Автор: `921600`. У тебя: `5000`.
+
+**`Mobs.Inquisitor.Sets Inquisitor Damage`**
+- Автор: `20.0`. У тебя: `15.0`.
+
+**`Mobs.Mound.Sets Mound Ageing Cooldown`**
+- Автор: `600`. У тебя: `2500`.
+
+**`Mobs.Mound.Sets Mound Infection Cooldown`**
+- Автор: `25`. У тебя: `85`.
+
+**`Mobs.Mound.Sets Mound default range`**
+- Автор: `10.0`. У тебя: `5.0`.
+
+**`Mobs.Mound.Sets Mound range at the age of 2`**
+- Автор: `15.0`. У тебя: `10.0`.
+
+**`Mobs.Mound.Sets Mound range at the age of 3`**
+- Автор: `20.0`. У тебя: `15.0`.
+
+**`Mobs.Mound.Sets Mound range at the age of 4`**
+- Автор: `25.0`. У тебя: `20.0`.
+
+**`Mobs.Mound.Sets the amount of biomass a mound can feed a structure block at once`**
+- Автор: `2`. У тебя: `1`.
+
+**`Mobs.Mound.Sets the range in which a mound checks for feedable blocks`**
+- Автор: `75`. У тебя: `45`.
+
+**`Mobs.Proto Hivemind.Chance for the death of a linked evolved infected to trigger the hivemind`**
+- Автор: `2.0`. У тебя: `15.0`.
+
+**`Mobs.Proto Hivemind.Mobs that the proto can summon to defend itself`**
+- Список: автор 6 записей, твой 7 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:delusioner`
+
+**`Mobs.Proto Hivemind.Sentient Mobs targeted by the hivemind`**
+- Список: автор 14 записей, твой 11 записей.
+- Только автор / изменённые записи автора: `mca:female_villager`, `mca:male_villager`, `touhou_little_maid:maid`
+- Только твой / изменённые записи у тебя: нет
+
+**`Mobs.Proto Hivemind.Sets Proto Damage Cap, set to 0 to disable`**
+- Автор: `50.0`. У тебя: `20.0`.
+
+**`Mobs.Proto Hivemind.Sets The chance for a raid to start`**
+- Автор: `3.0`. У тебя: `0.5`.
+
+**`Mobs.Proto Hivemind.Sets the linking range`**
+- Автор: `200`. У тебя: `300`.
+
+**`Mobs.Scamper.Sets Scamper Age`**
+- Автор: `300`. У тебя: `600`.
+
+**`Mobs.Scent.Mobs that can be summoned by the Scent`**
+- Список: автор 1 записей, твой 4 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:inf_villager`, `spore:inf_pillager`, `spore:inf_husk`
+
+**`Mobs.Scent.Overcharged Scent buff effect list`**
+- Список: автор 1 записей, твой 5 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `minecraft:speed`, `minecraft:health_boost`, `minecraft:strength`, `minecraft:resistance`
+
+**`Mobs.Scent.Should Scents have particles?`**
+- Автор: `True`. У тебя: `False`.
+
+**`Mobs.Scent.The chance for the scent to spawn from a mob dying (1-100)`**
+- Автор: `1`. У тебя: `2`.
+
+**`Mobs.Scent.The max amount of Scents that can spawn in an area`**
+- Автор: `5`. У тебя: `2`.
+
+**`Mobs.Vanguard.Sets The size of the Vanguard raid`**
+- Автор: `8`. У тебя: `4`.
+
+**`Mobs.Verwahrung.Verwahrung buffs`**
+- Список: автор 1 записей, твой 4 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `minecraft:speed`, `minecraft:strength`, `minecraft:resistance`
+
+**`Mobs.Verwahrung.Verwahrung summons`**
+- Список: автор 10 записей, твой 11 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:inf_evoker`
+
+**`Mobs.Vigil.Sets the maximum size of the wave`**
+- Автор: `15`. У тебя: `7`.
+
+**`Mobs.Vigil.Vigil max wave`**
+- Список: автор 13 записей, твой 29 записей.
+- Только автор / изменённые записи автора: `spore:protector`, `spore:nuclea`, `spore:inebriater`, `spore:naiad`
+- Только твой / изменённые записи у тебя: `spore:inf_vindicator`, `spore:inf_witch`, `spore:brute`, `spore:leaper`, `spore:inf_evoker`, `spore:spitter`, `spore:howler`, `spore:wendigo`, `spore:hollen`, `spore:hevoker`, `spore:ogre`, `spore:slasher`, `spore:inquisitor`, `spore:brot`, `spore:volatile`, `spore:mephitic`, `spore:gorgon`, `spore:gargoyle`, `spore:hvindicator`, `spore:grober`
+
+**`Mobs.Vigil.Vigil min wave`**
+- Список: автор 2 записей, твой 6 записей.
+- Только автор / изменённые записи автора: `spore:bairn`
+- Только твой / изменённые записи у тебя: `spore:inf_husk`, `spore:inf_drowned`, `spore:inf_drowned`, `spore:inf_villager`, `spore:inf_pillager`
+
+**`Mobs.Vigil.Vigil mix wave`**
+- Список: автор 7 записей, твой 18 записей.
+- Только автор / изменённые записи автора: `spore:braiomil`, `spore:busser`, `spore:scamper`
+- Только твой / изменённые записи у тебя: `spore:inf_villager`, `spore:inf_pillager`, `spore:inf_wanderer`, `spore:gorgon`, `spore:gargoyle`, `spore:mephitic`, `spore:thorn`, `spore:nuclea`, `spore:jagd`, `spore:scavenger`, `spore:slasher`, `spore:leaper`, `spore:inf_evoker`, `spore:spitter`
+
+**`Mobs.Womb.How much biomass does it get from consuming infected`**
+- Автор: `5`. У тебя: `3`.
+
+**`Mobs.Womb.Mobs that are summoned for air support`**
+- Список: автор 2 записей, твой 2 записей.
+- Только автор / изменённые записи автора: `spore:howitzer`
+- Только твой / изменённые записи у тебя: `spore:verfall`
+
+**`Mobs.Womb.Mobs that are summoned for underground support`**
+- Список: автор 1 записей, твой 1 записей.
+- Только автор / изменённые записи автора: `spore:gazenbreacher`
+- Только твой / изменённые записи у тебя: `spore:hohlfresser`
+
+**`Mobs.Womb.Sets the required biomass before it summons a calamity`**
+- Автор: `100`. У тебя: `250`.
+
+**`Mobs.Womb.Sets the time before the Womb gains one biomass`**
+- Автор: `30`. У тебя: `75`.
+
+**`Music System.Time before ambient songs start playing in minutes`**
+- Автор: `10`. У тебя: `7`.
+
+**`Spawns.MobCap`**
+- Автор: `40`. У тебя: `25`.
+
+**`Spawns.Mobs that spawn in laboratory type structures`**
+- Список: автор 0 записей, твой 9 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:inf_hazmat|70|2|5`, `spore:saugling|15|1|2`, `spore:inebriater|30|2|3`, `spore:chemist|30|2|3`, `spore:conductor|30|2|3`, `spore:inf_player|20|1|2`, `spore:plagued|15|1|2`, `spore:lacerator|20|1|3`, `spore:biobloob|10|1|2`
+
+**`Spawns.mob|weight|minimum|maximum`**
+- Список: автор 0 записей, твой 8 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:inf_human|80|2|5`, `spore:inf_drowned|10|1|2`, `spore:inf_pillager|40|1|3`, `spore:inf_villager|70|1|3`, `spore:inf_player|20|1|2`, `spore:inf_wanderer|25|1|2`, `spore:inf_witch|25|1|2`, `spore:inf_diseased_villager|10|1|2`
+
+**`Targeting Tasks.Mobs ALWAYS Targeted`**
+- Список: автор 6 записей, твой 3 записей.
+- Только автор / изменённые записи автора: `mca:female_villager`, `mca:male_villager`, `touhou_little_maid:maid`
+- Только твой / изменённые записи у тебя: нет
+
+**`Targeting Tasks.Mobs Not Targeted`**
+- Список: автор 1 записей, твой 10 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `minecraft:creeper`, `minecraft:allay`, `minecraft:dolphin`, `minecraft:glow_squid`, `minecraft:squid`, `minecraft:bat`, `creeperoverhaul:`, `sculkhorde:`, `fromanotherworld:`
+
+**`Targeting Tasks.Mobs that will run from infected`**
+- Список: автор 5 записей, твой 3 записей.
+- Только автор / изменённые записи автора: `spore:gastgaber`, `spore:scamper`
+- Только твой / изменённые записи у тебя: нет
+
+**`Targeting Tasks.Mobs that will target infected`**
+- Список: автор 5 записей, твой 4 записей.
+- Только автор / изменённые записи автора: `minecraft:`, `#custom_entity_tags:automaton`, `touhou_little_maid:maid`
+- Только твой / изменённые записи у тебя: `minecraft:iron_golem`, `minecraft:snow_golem`
+
+**`Targeting Tasks.Should attack Animals?`**
+- Автор: `True`. У тебя: `False`.
+
+**`Weapons and Tools OwO.Gas Masks.Gas masks`**
+- Список: автор 4 записей, твой 2 записей.
+- Только автор / изменённые записи автора: `spore:living_helmet`, `spore:inf_helmet`
+- Только твой / изменённые записи у тебя: нет
+### sporedata.toml
+
+**`Block infection.Blocks and their infected counterparts`**
+- Список: автор 0 записей, твой 32 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `minecraft:stone|spore:infested_stone`, `minecraft:grass_block|minecraft:mycelium`, `minecraft:dirt|spore:infested_dirt`, `minecraft:coarse_dirt|spore:infested_dirt`, `minecraft:podzol|spore:infested_dirt`, `minecraft:podzol|spore:infested_dirt`, `minecraft:rooted_dirt|spore:infested_dirt`, `minecraft:deepslate|spore:infested_deepslate`, `minecraft:sand|spore:infested_sand`, `minecraft:gravel|spore:infested_gravel`, `minecraft:netherrack|spore:infested_netherrack`, `minecraft:end_stone|spore:infested_end_stone`, `minecraft:soul_sand|spore:infested_soul_sand`, `minecraft:soul_soil|spore:infested_soul_sand`, `minecraft:sculk|spore:rooted_mycelium`, `minecraft:red_sand|spore:infested_red_sand`, `minecraft:stone_bricks|spore:infested_stone_bricks`, `minecraft:bricks|spore:infested_bricks`, `minecraft:clay|spore:infested_clay`, `minecraft:cobblestone|spore:infested_cobblestone`, `minecraft:cobbled_deepslate|spore:infested_cobbled_deepslate`, `spore:lab_block|spore:infested_laboratory_block`, `spore:lab_block1|spore:infested_laboratory_block1`, `spore:lab_block2|spore:infested_laboratory_block2`, `spore:lab_block3|spore:infested_laboratory_block3`, `the_flesh_that_hates:flesh_block|spore:biomass_block`, `the_flesh_that_hates:flesh_sand|spore:biomass_block`, `the_flesh_that_hates:flesh_tree|spore:biomass_block`, `the_flesh_that_hates:flesh_plank|spore:biomass_block`, `the_flesh_that_hates:flesh_pile|spore:biomass_block`, `the_flesh_that_hates:tumor|spore:biomass_block`, `the_flesh_that_hates:purulent_tumor|spore:biomass_block`
+
+**`Cryogenic machine parameters.Blocks and their cleaned counterparts`**
+- Список: автор 6 записей, твой 19 записей.
+- Только автор / изменённые записи автора: `spore:organite|spore:freeze_burned_biomass`, `spore:mycelium_block|spore:freeze_burned_biomass`, `spore:fungal_shell|spore:freeze_burned_biomass`, `spore:overgrown_spawner|spore:freeze_burned_biomass`, `spore:crusted_bile|spore:freeze_burned_biomass`, `spore:rooted_mycelium|spore:freeze_burned_biomass`
+- Только твой / изменённые записи у тебя: `spore:infested_stone|minecraft:stone`, `minecraft:mycelium|minecraft:dirt`, `spore:infested_dirt|minecraft:dirt`, `spore:infested_deepslate|minecraft:deepslate`, `spore:infested_sand|minecraft:sand`, `spore:infested_gravel|minecraft:gravel`, `spore:infested_netherrack|minecraft:netherrack`, `spore:infested_end_stone|minecraft:end_stone`, `spore:infested_soul_sand|minecraft:soul_sand`, `spore:infested_red_sand|minecraft:red_sand`, `spore:infested_clay|minecraft:clay`, `spore:infested_cobblestone|minecraft:cobblestone`, `spore:infested_cobbled_deepslate|minecraft:cobbled_deepslate`, `spore:infested_stone_bricks|minecraft:stone_bricks`, `spore:infested_bricks|minecraft:bricks`, `spore:infested_laboratory_block|spore:lab_block`, `spore:infested_laboratory_block1|spore:lab_block1`, `spore:infested_laboratory_block2|spore:lab_block2`, `spore:infested_laboratory_block3|spore:lab_block3`
+
+**`Cryogenic machine parameters.Range`**
+- Автор: `26`. У тебя: `20`.
+
+**`Loot Tables.Gazen Tongue`**
+- Список: автор 2 записей, твой 2 записей.
+- Только автор / изменённые записи автора: `spore:mutated_fiber|50|1|5`, `spore:tumor|75|1|4`
+- Только твой / изменённые записи у тебя: `spore:mutated_fiber|100|5|14`, `spore:tumor|100|1|4`
+
+**`Loot Tables.Organite Block`**
+- Список: автор 10 записей, твой 6 записей.
+- Только автор / изменённые записи автора: `spore:mutated_fiber|90|10|20`, `spore:spine|25|1|2`, `spore:innards|55|1|4`, `spore:altered_spleen|25|1|2`, `spore:mutated_heart|80|1|3`, `spore:alveolic_sack|75|2|5`, `spore:claw_fragment|85|6|10`, `spore:cerebrum|30|1|3`, `spore:wing_membrane|30|1|4`, `spore:armor_fragment|90|7|14`
+- Только твой / изменённые записи у тебя: `spore:mutated_fiber|50|1|4`, `spore:spine|80|1|3`, `spore:innards|70|1|5`, `spore:altered_spleen|70|1|2`, `spore:mutated_heart|85|1|3`, `spore:alveolic_sack|80|2|4`
+
+**`Others.Infected Player possible names`**
+- Список: автор 24 записей, твой 57 записей.
+- Только автор / изменённые записи автора: `Minigato668`, `Slasher`, `Pyrite`, `moparornocar1169`, `Chocola_P`, `Fresh_cross`, `Kara_P`, `OmnitaeCyverian`, `Soulhunter`, `TheAudacity`, `Splashpaws`, `Apex_Sanctum`, `SWOLEFO`, `IceCreamStas`, `LORD_SEAL`, `fritick`, `scattered_mushroom`, `Ambrose`, `Cinnabun0305`, `fungalpreacher`, `Visteus`, `lev0u`, `Manticore_enjoyer`
+- Только твой / изменённые записи у тебя: `ABucketOfFriedChicken`, `LoneGuy`, `cheesepuff`, `Sire_AwfulThe1st`, `Azami`, `Deyvid`, `Dany_Why`, `Technoblade`, `Ike`, `Hypnotizd`, `That_Insane_Guy`, `JhonOK22`, `Tabcaps`, `WhisperFire26`, `ButtonHatBoy`, `Gistique`, `yile_ouo`, `BigXplosion`, `Atomiclbomb`, `Mad_Dog`, `Ripley`, `gregTheTyrant`, `Joker_de_Coeur`, `xXFuryXx`, `Nova69`, `Belladonna`, `Entity`, `Keymind`, `Whisper`, `Helldwin`, `ExceedingSky74`, `Flash62724`, `Hank_o`, `JWT114`, `DawnsSlayers`, `Dr_Pilot_MOO`, `NexouuZ`, `Mr_Door12323`, `PedroHenrry`, `TVGuy`, `ThatGardener`, `ThatGardener`, `TheCaramelGuy`, `TokenOni420`, `lightigivhi`, `CODATOWER`, `hammbug`, `mrlambert6`, `DivnejFelix`, `SyrCrypt`, `KaratFeng`, `Toasteroni`, `UnmeiHa`, `AllToAshes`, `0dna`, `minisketchy0919`
+
+**`Raid system parameters.Items that may drop at the end of the raid`**
+- Список: автор 22 записей, твой 24 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:cryogenic_reagent`, `spore:frozen_tumor`
+
+**`Raid system parameters.Raid level 1 spawns`**
+- Список: автор 2 записей, твой 7 записей.
+- Только автор / изменённые записи автора: `spore:scamper`
+- Только твой / изменённые записи у тебя: `spore:inf_husk`, `spore:inf_drowned`, `spore:inf_villager`, `spore:inf_pillager`, `spore:inf_player`, `spore:inf_witch`
+
+**`Raid system parameters.Raid level 2 spawns`**
+- Список: автор 7 записей, твой 12 записей.
+- Только автор / изменённые записи автора: `spore:griefer`, `spore:busser`, `spore:scamper`, `spore:bloater`
+- Только твой / изменённые записи у тебя: `spore:howler`, `spore:inf_husk`, `spore:brute`, `spore:slasher`, `spore:inf_witch`, `spore:inf_villager`, `spore:jagd`, `spore:inf_pillager`, `spore:inf_player`
+
+**`Raid system parameters.Raid level 3 spawns`**
+- Список: автор 13 записей, твой 20 записей.
+- Только автор / изменённые записи автора: `spore:protector`, `spore:inebriater`, `spore:naiad`
+- Только твой / изменённые записи у тебя: `spore:howler`, `spore:mephitic`, `spore:nuclea`, `spore:slasher`, `spore:volatile`, `spore:leaper`, `spore:spitter`, `spore:inf_pillager`, `spore:inf_vindicator`, `spore:inf_evoker`
+
+**`Raid system parameters.Special Spawns`**
+- Список: автор 6 записей, твой 16 записей.
+- Только автор / изменённые записи автора: нет
+- Только твой / изменённые записи у тебя: `spore:grober`, `spore:reaper`, `spore:saugling`, `spore:hevoker`, `spore:hvendicator`, `spore:biobloob`, `spore:specter`, `spore:plagued`, `spore:lacerator`, `spore:inf_construct`
+
+**`Structure data.Biomass Lump minimal kills`**
+- Автор: `2`. У тебя: `5`.
+
+**`Structure data.Reconstructed Mind Block kills`**
+- Автор: `3500`. У тебя: `40`.
+
+**`Structure data.The range of the Outpost watcher`**
+- Автор: `80`. У тебя: `50`.

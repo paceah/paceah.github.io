@@ -1,0 +1,175 @@
+// =====================================================
+// ПОЛНОЕ РАЗДЕЛЕНИЕ СТАЛИ
+// create_ironworks:steel_ingot  → только ironworks
+// mcore:steel_ingot             → только mcore (marbleds arsenal)
+// crusty_chunks:steel_ingot     → только crusty_chunks (warium)
+// =====================================================
+
+// -----------------------------------------------------
+// 1. ТЕГИ
+// В KubeJS 2001.6.5 правильный способ — ServerEvents.tags('item', ...)
+// TagEvents не существует в этой версии.
+// -----------------------------------------------------
+ServerEvents.tags('item', event => {
+
+  const STEEL = {
+    create: 'create_ironworks:steel_ingot',
+    mcore:  'mcore:steel_ingot',
+    crusty: 'crusty_chunks:steel_ingot'
+  };
+
+  console.log('[Теги] Убираем все три стали из общих тегов...');
+
+  // Убираем ВСЕ три стали из всех тегов стали
+  // Важно убрать все три — иначе оставшаяся принимается везде через тег
+
+  // ВАЖНО: crusty_chunks:steel_ingot НЕЛЬЗЯ убирать из forge:ingots/steel!
+  // Foundry (вариум) проверяет этот тег в Java-коде (хардкод).
+  // Если убрать crusty сталь из тега — foundry перестаёт работать.
+  event.remove('forge:ingots/steel', STEEL.create);
+  event.remove('forge:ingots/steel', STEEL.mcore);
+  // НЕ убираем STEEL.crusty из forge:ingots/steel — foundry это требует!
+
+  event.remove('forge:ingots', STEEL.create);
+  event.remove('forge:ingots', STEEL.mcore);
+  event.remove('forge:ingots', STEEL.crusty); // из forge:ingots можно убрать, foundry не смотрит туда
+
+  event.remove('c:steel_ingots', STEEL.create);
+  event.remove('c:steel_ingots', STEEL.mcore);
+  event.remove('c:steel_ingots', STEEL.crusty);
+
+  event.remove('c:ingots/steel', STEEL.create);
+  event.remove('c:ingots/steel', STEEL.mcore);
+  event.remove('c:ingots/steel', STEEL.crusty);
+
+  console.log('[Теги] Готово!');
+});
+
+
+// -----------------------------------------------------
+// 2. РЕЦЕПТЫ
+// Структура взята из оригинального рабочего скрипта,
+// добавлено только полное разделение без мостов.
+// -----------------------------------------------------
+ServerEvents.recipes(event => {
+
+  const STEEL = {
+    create: 'create_ironworks:steel_ingot',
+    mcore:  'mcore:steel_ingot',
+    crusty: 'crusty_chunks:steel_ingot'
+  };
+
+  console.log('[Сталь] ========== НАЧАЛО РАЗДЕЛЕНИЯ ==========');
+
+  // ---------------------------------------------------
+  // A. Удаляем рецепты где мод требует ЧУЖУЮ сталь
+  // ---------------------------------------------------
+  console.log('[Сталь] Чистим рецепты от чужой стали...');
+
+  // create_ironworks не должен принимать чужую сталь
+  event.remove({ mod: 'create_ironworks', input: STEEL.mcore  });
+  event.remove({ mod: 'create_ironworks', input: STEEL.crusty });
+
+  // mcore не должен принимать чужую сталь
+  event.remove({ mod: 'mcore', input: STEEL.create });
+  event.remove({ mod: 'mcore', input: STEEL.crusty });
+
+  // crusty_chunks не должен принимать чужую сталь
+  event.remove({ mod: 'crusty_chunks', input: STEEL.create });
+  event.remove({ mod: 'crusty_chunks', input: STEEL.mcore  });
+
+  // ---------------------------------------------------
+  // B. Заменяем теговые слоты на конкретную сталь мода
+  // После шага 1 теги пусты — рецепты через тег сломаются.
+  // Возвращаем каждому моду ЕГО сталь вместо тега.
+  // ---------------------------------------------------
+  console.log('[Сталь] Привязываем теговые слоты к своей стали...');
+
+  const steelTags = [
+    '#forge:ingots/steel',
+    '#c:steel_ingots',
+    '#c:ingots/steel'
+  ];
+
+  steelTags.forEach(tag => {
+    event.replaceInput({ mod: 'create_ironworks' }, tag, STEEL.create);
+    event.replaceInput({ mod: 'mcore'            }, tag, STEEL.mcore);
+    event.replaceInput({ mod: 'crusty_chunks'    }, tag, STEEL.crusty);
+  });
+
+  // ---------------------------------------------------
+  // C. Заменяем прямые ссылки на чужую сталь внутри мода
+  // ---------------------------------------------------
+  event.replaceInput({ mod: 'create_ironworks' }, STEEL.mcore,  STEEL.create);
+  event.replaceInput({ mod: 'create_ironworks' }, STEEL.crusty, STEEL.create);
+
+  event.replaceInput({ mod: 'mcore' }, STEEL.create, STEEL.mcore);
+  event.replaceInput({ mod: 'mcore' }, STEEL.crusty, STEEL.mcore);
+
+  event.replaceInput({ mod: 'crusty_chunks' }, STEEL.create, STEEL.crusty);
+  event.replaceInput({ mod: 'crusty_chunks' }, STEEL.mcore,  STEEL.crusty);
+
+  // ---------------------------------------------------
+  // D. Сторонние технические моды — убираем прямые ссылки
+  // Через тег они уже не получат нашу сталь (шаг 1).
+  // Если мод всё же хардкодит наш item ID напрямую — удаляем.
+  // ---------------------------------------------------
+  console.log('[Сталь] Чистим сторонние моды...');
+
+  const TECH_MODS = [
+    'create',
+    'createdieselgenerators',
+    'createaddition',
+    'createbigcannons',
+    'createnuclear',
+    'mekanism',
+    'mekanismgenerators',
+    'mekanismtools',
+    'thermal',
+    'thermal_expansion',
+    'thermal_foundation',
+    'immersiveengineering',
+    'immersivepetroleum',
+    'pneumaticcraft',
+    'railcraft',
+    'enderio',
+    'enderiomachines',
+    'draconicevolution',
+    'rftoolsbase',
+    'rftoolspower',
+    'rftoolsutility',
+    'industrialforegoing',
+    'mysticalagriculture',
+    'mysticalagradditions',
+    'pedestals',
+    'pipez',
+    'titanium',
+    'powah',
+    'redstone_arsenal',
+    'fluxnetworks',
+    'simplegenerators',
+    'generators',
+    'advancedgenerators',
+    'bigreactors',
+    'extremereactors',
+    'tconstruct',
+    'minecraft'
+  ];
+
+  TECH_MODS.forEach(mod => {
+    event.remove({ mod: mod, input: STEEL.create });
+    event.remove({ mod: mod, input: STEEL.mcore  });
+    event.remove({ mod: mod, input: STEEL.crusty });
+  });
+
+  // ---------------------------------------------------
+  // Итог
+  // ---------------------------------------------------
+  console.log('===========================================');
+  console.log('РАЗДЕЛЕНИЕ СТАЛИ ВЫПОЛНЕНО');
+  console.log('===========================================');
+  console.log('create_ironworks:steel_ingot → только ironworks');
+  console.log('mcore:steel_ingot            → только mcore');
+  console.log('crusty_chunks:steel_ingot    → только crusty_chunks');
+  console.log('===========================================');
+});
