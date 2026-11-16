@@ -1,11 +1,11 @@
 {
-  "contentToken": "af488344acaa59d919330b3173fd7a7b4bf3f00d",
-  "policySha1": "f60b6d239367a028e0ef816985fc2703aac0a862",
-  "createdAt": "2026-11-16T15:34:55.527239700Z",
-  "journalHead": 5,
+  "contentToken": "6c04b979def1d6e1867e9b379413d63de333ec92",
+  "policySha1": "48a1559384e6ce10dcb57cbc35b411cee149af1f",
+  "createdAt": "2026-11-16T21:10:30.727918400Z",
+  "journalHead": 1,
   "waitingMusicSha1": "",
   "ownershipLedger": {
-    "modpackId": "4iawmc1",
+    "modpackId": "m97awg8",
     "entries": [
       {
         "logicalPath": "config/MouseTweaks.cfg",
@@ -427,15 +427,7 @@
         "logicalPath": "config/fabric/indigo-renderer.properties",
         "historicalHashes": [
           {
-            "sha1": "1f76a79aa223da75f6e1622173fc07c0bd9bd91d",
-            "size": 290
-          },
-          {
-            "sha1": "7c7b8620f1b276d79ee8bbf2f8a8d86b4d16867a",
-            "size": 290
-          },
-          {
-            "sha1": "85f8d816b4584cc5997ac364f90ae55f3f120b59",
+            "sha1": "7ed2f5bec6a9abd11b037d9c0a1809c23796e20c",
             "size": 290
           }
         ],
@@ -671,45 +663,6 @@
           {
             "sha1": "0b66661cb1502be37f15fafc585a1602cf748e4b",
             "size": 1205
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "PRESENT"
-      },
-      {
-        "logicalPath": "config/jei/world/local/Прогон Номер 1/lookupHistory.ini",
-        "historicalHashes": [
-          {
-            "sha1": "1a5f0f9ac02dbc8dfe0c0aee670c3a11f9d62415",
-            "size": 1191
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "PRESENT"
-      },
-      {
-        "logicalPath": "config/jei/world/local/Прогон Номер 2/lookupHistory.ini",
-        "historicalHashes": [
-          {
-            "sha1": "af78bb222ea45f0d748ded495ecd7f1a3ef20957",
-            "size": 890
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "PRESENT"
-      },
-      {
-        "logicalPath": "config/jei/world/server/Сервер Minecraft (26_122_88_173 44444)/lookupHistory.ini",
-        "historicalHashes": [
-          {
-            "sha1": "f13a71c4ea0805b95d914efc9330d0718115bfd3",
-            "size": 35
           }
         ],
         "historicalGroupIds": [
@@ -1189,15 +1142,7 @@
         "logicalPath": "config/psychedelicraft.json",
         "historicalHashes": [
           {
-            "sha1": "1d9c0993845aab20a06d2e85fac7efb52161757c",
-            "size": 6927
-          },
-          {
-            "sha1": "afe8d1933ba4f4f89c35314190fb75b8669bf432",
-            "size": 6927
-          },
-          {
-            "sha1": "d12d79eb218d81dc39aadaec6cde86253e4126c4",
+            "sha1": "586506e3a962f1e917bebef321856625a3ebedf6",
             "size": 6927
           }
         ],
@@ -2934,116 +2879,12 @@
           "main"
         ],
         "currentStatus": "PRESENT"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporeconfig.toml",
-        "historicalHashes": [
-          {
-            "sha1": "c7f30970fefc04405f0f36ee51e7047e8e0822a1",
-            "size": 55231
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/sporedata.toml",
-        "historicalHashes": [
-          {
-            "sha1": "8cd22dae94f40d1567495920f3dc5b58f81eda9c",
-            "size": 16620
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/игра с аддонами (инкизиция)/версия 1.0 (от кодекса)/ПОЛНЫЙ СПИСОК ИЗМЕНЕНИЙ (НЕ КИДАТЬ В КОНФИГ).md",
-        "historicalHashes": [
-          {
-            "sha1": "57dfd1feaa734da89300827d305896f662ebed00",
-            "size": 31897
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporeconfig.toml",
-        "historicalHashes": [
-          {
-            "sha1": "d82127f199b7bfa3a5f17e14aa8b7c1b4221eb54",
-            "size": 53923
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/sporedata.toml",
-        "historicalHashes": [
-          {
-            "sha1": "38c2dd66263c25205f3e8be2c7adbe3555c2f211",
-            "size": 19625
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие инфекцию/стандартная ванилла (без аддона на инквизицию)/версия 1.0/ОПИСАНИЕ КОНФИГА (НЕ КИДАТЬ В ПАПКУ config).txt",
-        "historicalHashes": [
-          {
-            "sha1": "c85d9137324db2aa47bb4a86b60233d73fd20bff",
-            "size": 771
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/КОНФИГИ/меняющие торговлю/версия 1.0 АЛЬФА/economical_villager_trading-common.toml",
-        "historicalHashes": [
-          {
-            "sha1": "2079b31d1a291a2d9de0409ecbcecff501d586d9",
-            "size": 13158
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
-      },
-      {
-        "logicalPath": "ЗОМБИ ЧИПСЫ АДДОН/НАСТРОЙКИ УПРАВЛЕНИЯ + БИНДЫ/options.txt",
-        "historicalHashes": [
-          {
-            "sha1": "fd24df2b134641c373a1ab5fb17b7489fb9340ea",
-            "size": 10178
-          }
-        ],
-        "historicalGroupIds": [
-          "main"
-        ],
-        "currentStatus": "TOMBSTONE"
       }
     ],
-    "digest": "baad486264dc19c58a78bfc53d74bbc31c0d774f"
+    "digest": "947728e414ce464640bd76d3e59fcc531a727885"
   },
   "policy": {
-    "modpackId": "4iawmc1",
+    "modpackId": "m97awg8",
     "modpackName": "ZOMBIE CHIPS REBORN V1.1",
     "automodpackVersion": "5.0.0-rc.7",
     "loader": "forge",
@@ -3256,7 +3097,7 @@
               "size": "290",
               "type": "config",
               "editable": false,
-              "sha1": "85f8d816b4584cc5997ac364f90ae55f3f120b59"
+              "sha1": "7ed2f5bec6a9abd11b037d9c0a1809c23796e20c"
             },
             "config/fabwork.json": {
               "size": "104",
@@ -3365,24 +3206,6 @@
               "type": "config",
               "editable": false,
               "sha1": "0b66661cb1502be37f15fafc585a1602cf748e4b"
-            },
-            "config/jei/world/local/Прогон Номер 1/lookupHistory.ini": {
-              "size": "1191",
-              "type": "config",
-              "editable": false,
-              "sha1": "1a5f0f9ac02dbc8dfe0c0aee670c3a11f9d62415"
-            },
-            "config/jei/world/local/Прогон Номер 2/lookupHistory.ini": {
-              "size": "890",
-              "type": "config",
-              "editable": false,
-              "sha1": "af78bb222ea45f0d748ded495ecd7f1a3ef20957"
-            },
-            "config/jei/world/server/Сервер Minecraft (26_122_88_173 44444)/lookupHistory.ini": {
-              "size": "35",
-              "type": "config",
-              "editable": false,
-              "sha1": "f13a71c4ea0805b95d914efc9330d0718115bfd3"
             },
             "config/legendarysurvivaloverhaul/legendarysurvivaloverhaul-client.toml": {
               "size": "5107",
@@ -3604,7 +3427,7 @@
               "size": "6927",
               "type": "config",
               "editable": false,
-              "sha1": "1d9c0993845aab20a06d2e85fac7efb52161757c"
+              "sha1": "586506e3a962f1e917bebef321856625a3ebedf6"
             },
             "config/psychedelicraft_client.json": {
               "size": "2919",
