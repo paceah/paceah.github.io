@@ -1,8 +1,8 @@
 {
-  "contentToken": "bdf7ab1f7412f6d04730f68183ed809fd4af661c",
-  "policySha1": "bae2b0e9f7bf7c84d5bc03a2d6c37a2a1ad7c034",
-  "createdAt": "2026-11-16T15:16:05.110751200Z",
-  "journalHead": 3,
+  "contentToken": "bfd9bff07d56dc977e8099bdbda8dc5e7aabf35d",
+  "policySha1": "55c31380367173c5a9ae86709bfb8bd94a07c6d0",
+  "createdAt": "2026-11-16T15:30:42.185342700Z",
+  "journalHead": 4,
   "waitingMusicSha1": "",
   "ownershipLedger": {
     "modpackId": "4iawmc1",
@@ -432,6 +432,10 @@
           },
           {
             "sha1": "7c7b8620f1b276d79ee8bbf2f8a8d86b4d16867a",
+            "size": 290
+          },
+          {
+            "sha1": "85f8d816b4584cc5997ac364f90ae55f3f120b59",
             "size": 290
           }
         ],
@@ -1184,6 +1188,10 @@
       {
         "logicalPath": "config/psychedelicraft.json",
         "historicalHashes": [
+          {
+            "sha1": "1d9c0993845aab20a06d2e85fac7efb52161757c",
+            "size": 6927
+          },
           {
             "sha1": "afe8d1933ba4f4f89c35314190fb75b8669bf432",
             "size": 6927
@@ -2928,7 +2936,7 @@
         "currentStatus": "PRESENT"
       }
     ],
-    "digest": "99f84a9518402ce9926357a81e7cfc151b94ccf5"
+    "digest": "a891e46798b0c12fb60ad877d203e93d548c3fa7"
   },
   "policy": {
     "modpackId": "4iawmc1",
@@ -3144,7 +3152,7 @@
               "size": "290",
               "type": "config",
               "editable": false,
-              "sha1": "7c7b8620f1b276d79ee8bbf2f8a8d86b4d16867a"
+              "sha1": "85f8d816b4584cc5997ac364f90ae55f3f120b59"
             },
             "config/fabwork.json": {
               "size": "104",
@@ -3492,7 +3500,7 @@
               "size": "6927",
               "type": "config",
               "editable": false,
-              "sha1": "afe8d1933ba4f4f89c35314190fb75b8669bf432"
+              "sha1": "1d9c0993845aab20a06d2e85fac7efb52161757c"
             },
             "config/psychedelicraft_client.json": {
               "size": "2919",
